@@ -1,2 +1,14 @@
 #!/bin/bash
-~/Sublime\ Text\ 2/sublime_text $*
+
+# Is something being piped in bro?
+if [ -t 0 ]; then
+	~/Sublime\ Text\ 2/sublime_text $*
+else
+	# Write stdin to file util we get EOF, then open that.
+	tmp="/tmp/sublin.$RANDOM.txt"
+	while read -r line ; do
+        echo "$line" >> $tmp
+    done
+    ~/Sublime\ Text\ 2/sublime_text -w $tmp
+    rm -f $tmp
+fi
