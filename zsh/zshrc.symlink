@@ -7,6 +7,8 @@ export PROJECTS=~/Code
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH_DF/**/*.zsh)
+osx_config_files=($ZSH_DF/**/*.zsh.osx)
+linux_config_files=($ZSH_DF/**/*.zsh.linux)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -19,6 +21,20 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
+case $OSTYPE in
+darwin*)
+	for file in ${osx_config_files}
+	do
+		source $file 
+	done
+	;;
+linux*)
+	for file in ${linux_config_files}
+	do
+		source $file 
+	done
+	;;
+esac
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
