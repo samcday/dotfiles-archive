@@ -1,0 +1,1 @@
+eval `aws-identity $1 sh` && aws-identity $1
