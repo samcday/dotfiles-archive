@@ -1,14 +1,23 @@
 #!/bin/bash
 
+ARGS=$*
+function runsbl() {
+	if [[ $ARGS == *-w* ]]; then
+		~/Sublime\ Text\ 2/sublime_text $* $ARGS
+	else
+		setsid ~/Sublime\ Text\ 2/sublime_text $* $ARGS 2>&1 > /dev/null &
+	fi
+}
+
 # Is something being piped in bro?
 if [ -t 0 ]; then
-	~/Sublime\ Text\ 2/sublime_text $*
+	runsbl
 else
 	# Write stdin to file util we get EOF, then open that.
-	tmp="/tmp/sublin.$RANDOM.txt"
+	mkdir -p /tmp/sublin 2>&1 > /dev/null
+	tmp="/tmp/sublin/$RANDOM.txt"
 	while read -r line ; do
         echo "$line" >> $tmp
     done
-    ~/Sublime\ Text\ 2/sublime_text -w $tmp
-    rm -f $tmp
+    runsbl $tmp
 fi
