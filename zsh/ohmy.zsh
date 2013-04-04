@@ -29,6 +29,8 @@ DISABLE_LS_COLORS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git grails)
+plugins=(git grails zsh-syntax-highlighting)
+
+export ZSH_CUSTOM=$ZSH_DF/ohmyzsh-custom
 
 source $ZSH/oh-my-zsh.sh
