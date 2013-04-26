@@ -19,6 +19,7 @@ set -e
 # Configure these:
 AWS_DIR=~/.aws-identities
 ACCESS_FILE_NAME="aws-credentials"
+REGION_FILE_NAME="default-region"
 
 # Die if grep is missing from $PATH
 hash grep 2>/dev/null || { echo >&2 "aws-identity requires grep, but it doesn't seem to be available.  Aborting."; exit 1; }
@@ -120,6 +121,13 @@ then
 	# Missing credential file. Unset for this identity if we're in a shell mode.
 	else
 		if [ ! -z $2 ]; then echo "$UNSET AWS_CREDENTIAL_FILE"; fi
+	fi
+
+	if [ -f $AWS_DIR/$1/$REGION_FILE_NAME ]; then
+		if [ ! -z $2 ]; then
+			REGION=`cat $AWS_DIR/$1/$REGION_FILE_NAME | tr -d '\040\010\012\015'`
+			echo "$COMMAND EC2_URL${SEPARATOR}https://ec2.${REGION}.amazonaws.com:443"
+		fi
 	fi
 
 	# When not in a shell mode, describe what was set and what was unset.
