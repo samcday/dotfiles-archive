@@ -5,7 +5,7 @@
         protocol = https
 [user]
         name = samcday
-        email = sam.c.day@gmail.com
+        email = me@samcday.com.au
         helper = osxkeychain
 [alias]
         co = checkout
