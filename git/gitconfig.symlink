@@ -4,8 +4,8 @@
 [hub]
         protocol = https
 [user]
-        name = samcday
-        email = me@samcday.com.au
+	name = Sam Day
+	email = sday@atlassian.com
         helper = osxkeychain
 [alias]
         co = checkout
