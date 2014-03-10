@@ -1,0 +1,1 @@
+type docker-osx >/dev/null 2>&1 && eval `docker-osx env`
