@@ -20,3 +20,5 @@ web-app/WEB-INF/tld/fmt.tld
 *.sublime-project
 *.sublime-workspace
 .vagrant/
+node_modules/
+.idea/
