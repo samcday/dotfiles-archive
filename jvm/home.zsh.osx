@@ -1,1 +1,7 @@
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+if [ -f $HOME/.defaultjdk ]; then
+    DEFAULT_JDK_VERSION=`cat $HOME/.defaultjdk`
+fi
+
+export DEFAULT_JDK_VERSION=${DEFAULT_JDK_VERSION:-1.7}
+
+export JAVA_HOME=`/usr/libexec/java_home -v $DEFAULT_JDK_VERSION`
