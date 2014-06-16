@@ -1,0 +1,10 @@
+Host sydjumpbox
+    Hostname sydssh.atlassian.com
+    User sday
+
+Host sydhome
+    Hostname sday.dyn.syd.atlassian.com
+
+Host *.atlassian.com *.jira-dev.com sydhome
+    User sday
+    ProxyCommand nohup ssh sydjumpbox nc %h 22
