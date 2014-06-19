@@ -11,6 +11,7 @@ tap josegonzalez/php
 install ack
 install ant
 install atlassian-plugin-sdk
+install autossh
 install cmake
 install composer
 install couchdb
