@@ -1,0 +1,4 @@
+Host stash.atlassian.com
+    User git
+    Port 7997
+    ProxyCommand none
