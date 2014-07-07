@@ -1,5 +1,6 @@
 Host zippy.samcday.com.au speedy.samcday.com.au
     User sam
 
-Host host.daymedia.com.au
+Host dmhost
+    Hostname host.daymedia.com.au
     User sam
