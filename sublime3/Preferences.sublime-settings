@@ -22,5 +22,6 @@
 	],
 	"sublimelinter": true,
 	"theme": "Flatland Dark.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"tab_size": 2
 }
