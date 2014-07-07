@@ -1,0 +1,23 @@
+{
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"EditorConfig",
+		"Handlebars",
+		"Java Velocity",
+		"JavaScriptNext - ES6 Syntax",
+		"Jinja2",
+		"JsFormat",
+		"LESS",
+		"Markdown Preview",
+		"nginx",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pylint",
+		"Theme - Flatland",
+		"Theme - Soda",
+		"Varnish VCL"
+	]
+}

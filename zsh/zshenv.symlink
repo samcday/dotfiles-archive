@@ -1,0 +1,40 @@
+# shortcut to this dotfiles path is $ZSH_DF
+export ZSH_DF=$HOME/.dotfiles
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/Code
+
+# all of our zsh files
+typeset -U zshenv_files
+config_files=($ZSH_DF/**/*.zshenv)
+# Don't auto-import anything under ohmyzsh-custom. baaaad shit will ensue.
+config_files=(${config_files:#$ZSH_DF/ohmyzsh-custom*})
+
+# load everything but the path and completion files
+for file in ${config_files}
+do
+  source $file
+done
+
+case $OSTYPE in
+darwin*)
+    osx_config_files=($ZSH_DF/**/*.zshenv.osx)
+    # Icky hack. Check if the glob failed (no matches).
+    if [ "$osx_config_files" != "$ZSH_DF/**/*.zshenv.osx" ]; then
+        for file in ${osx_config_files}
+        do
+            source $file 
+        done
+    fi
+    ;;
+linux*)
+    linux_config_files=($ZSH_DF/**/*.zshenv.linux)
+    # Icky hack. Check if the glob failed (no matches).
+    if [ "$linux_config_files" != "$ZSH_DF/**/*.zshenv.linux" ]; then
+        for file in ${linux_config_files}
+        do
+            source $file 
+        done
+    fi
+    ;;
+esac
