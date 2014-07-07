@@ -5,6 +5,11 @@ Host sydjumpbox
 Host sydhome
     Hostname sday.dyn.syd.atlassian.com
 
-Host *.atlassian.com *.jira-dev.com sydhome
+Host sydhomenocontrolmaster
+    Hostname sday.dyn.syd.atlassian.com
+    ControlMaster no
+    ControlPath /dev/null
+
+Host *.atlassian.com *.jira-dev.com sydhome sydhomenocontrolmaster
     User sday
     ProxyCommand nohup ssh sydjumpbox nc %h 22

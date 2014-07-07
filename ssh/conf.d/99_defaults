@@ -1,0 +1,6 @@
+Host *
+    ForwardAgent yes
+    ServerAliveInterval 30
+    ControlMaster auto
+    ControlPath ~/.ssh/ssh-%r@%h:%p.sock
+    ControlPersist 1h
