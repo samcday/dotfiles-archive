@@ -26,6 +26,18 @@ fail () {
   exit
 }
 
+setup_st3() {
+  ST3_HOME=$HOME/Library/Application\ Support/Sublime\ Text\ 3/
+  if [ ! -L "$ST3_HOME/Packages/User" ]; then
+    if [ -d "$ST3_HOME/Packages/User" ]; then
+      success "Backing up old ST3 Packages/User directory."
+      mv "$ST3_HOME/Packages/User" "$ST3_HOME/Packages/User.backup"
+    fi
+    ln -s "$DOTFILES_ROOT/sublime3" "$ST3_HOME/Packages/User"
+    success "Set up ST3 Packages/User symlink."
+  fi
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
@@ -116,6 +128,7 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
+setup_st3
 
 # If we are on a mac, lets install and setup homebrew
 if [ "$(uname -s)" == "Darwin" ]
