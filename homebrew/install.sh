@@ -14,6 +14,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew bundle $ZSH_DF/Brewfile
 
 exit 0

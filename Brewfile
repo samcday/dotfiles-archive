@@ -14,11 +14,13 @@ install atlassian-plugin-sdk
 install autossh
 install cmake
 install composer
+install coreutils
 install couchdb
 install docker
 install elasticsearch
 install git
 install go
+install grc
 install nginx
 install php55
 install pidof
@@ -26,6 +28,7 @@ install postgresql
 install python
 install redis
 install sbt
+install spark
 install sqlite
 install subversion
 install varnish
