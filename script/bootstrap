@@ -26,6 +26,11 @@ fail () {
   exit
 }
 
+
+if [ $TERM_PROGRAM == "iTerm.app" ]; then
+  fail "Don't run me from iTerm."
+fi
+
 setup_st3() {
   ST3_HOME=$HOME/Library/Application\ Support/Sublime\ Text\ 3/
   if [ ! -L "$ST3_HOME/Packages/User" ]; then
@@ -36,6 +41,14 @@ setup_st3() {
     ln -s "$DOTFILES_ROOT/sublime3" "$ST3_HOME/Packages/User"
     success "Set up ST3 Packages/User symlink."
   fi
+}
+
+setup_iterm2() {
+  info "Setting up iTerm2"
+  killall iTerm 2>/dev/null || true
+  cp $DOTFILES_ROOT/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
+  killall cfprefsd
+  success "iTerm2 preferences updated."
 }
 
 setup_gitconfig () {
@@ -129,6 +142,7 @@ install_dotfiles () {
 setup_gitconfig
 install_dotfiles
 setup_st3
+setup_iterm2
 
 # If we are on a mac, lets install and setup homebrew
 if [ "$(uname -s)" == "Darwin" ]
