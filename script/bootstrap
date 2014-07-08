@@ -48,6 +48,8 @@ setup_iterm2() {
   killall iTerm 2>/dev/null || true
   cp $DOTFILES_ROOT/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
   killall cfprefsd
+  mkdir -p $HOME/Library/Fonts
+  cp $DOTFILES_ROOT/fonts/* $HOME/Library/Fonts
   success "iTerm2 preferences updated."
 }
 
