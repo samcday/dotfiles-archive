@@ -32,7 +32,15 @@ if [ $TERM_PROGRAM == "iTerm.app" ]; then
 fi
 
 setup_st3() {
-  ST3_HOME=$HOME/Library/Application\ Support/Sublime\ Text\ 3/
+  ST3_HOME=$HOME/Library/Application\ Support/Sublime\ Text\ 3
+  if [ ! -d "$ST3_HOME" ]; then
+    info "Bootstrapping ST3 Package Control"
+    mkdir -p "$ST3_HOME/Installed Packages"
+    mkdir -p "$ST3_HOME/Packages"
+    curl -s https://sublime.wbond.net/Package%20Control.sublime-package > "$ST3_HOME/Installed Packages/Package Control.sublime-package"
+    success "Package Control installed."
+  fi
+
   if [ ! -L "$ST3_HOME/Packages/User" ]; then
     if [ -d "$ST3_HOME/Packages/User" ]; then
       success "Backing up old ST3 Packages/User directory."

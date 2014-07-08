@@ -9,4 +9,4 @@
 $ZSH_DF/osx/set-defaults.sh
 
 # Install homebrew packages
-$ZSH_DF/homebrew/install.sh 2>&1
+$ZSH_DF/homebrew/install.sh
