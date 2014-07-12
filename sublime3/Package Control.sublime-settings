@@ -13,12 +13,18 @@
 		"LESS",
 		"Markdown Preview",
 		"nginx",
+		"SublimeFixMacPath",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pylint",
+		"tern_for_sublime",
 		"Theme - Flatland",
 		"Varnish VCL"
+	],
+	"repositories":
+	[
+		"https://github.com/int3h/SublimeFixMacPath"
 	]
 }

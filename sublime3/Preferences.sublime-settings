@@ -1,27 +1,33 @@
 {
-	"color_scheme": "Packages/User/Flatland Dark (SL).tmTheme",
-	"font_size": 18,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"jshint_options":
-	{
-		"esnext": true,
-		"predef":
-		[
-			"require",
-			"module",
-			"exports",
-			"console"
-		]
-	},
-	"rulers":
-	[
-		80
-	],
-	"sublimelinter": true,
-	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
-	"translate_tabs_to_spaces": true
+  "color_scheme": "Packages/User/Flatland Dark (SL).tmTheme",
+  "font_size": 18,
+  "ignored_packages": [
+    "Vintage",
+  ],
+  "jshint_options": {
+    "esnext": true,
+    "predef": [
+      "require",
+      "module",
+      "exports",
+      "console"
+    ]
+  },
+  "rulers": [
+    80
+  ],
+  "sublimelinter": true,
+  "tab_size": 2,
+  "theme": "Flatland Dark.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "auto_complete_triggers": [
+    {
+      "selector": "text.html",
+      "characters": "<"
+    },
+    {
+      "selector": "source.js",
+      "characters": "."
+    }
+  ]
 }
