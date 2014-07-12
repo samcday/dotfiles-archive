@@ -38,6 +38,7 @@ install zsh
 install caskroom/cask/brew-cask
 cask install alfred
 cask install apache-directory-studio
+cask install ccmenu
 cask install dash
 cask install dropbox
 cask install firefox
