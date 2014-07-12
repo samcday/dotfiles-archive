@@ -22,6 +22,7 @@ install git
 install go
 install grc
 install nginx
+install ngrok
 install php55
 install pidof
 install postgresql
