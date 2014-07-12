@@ -1,7 +1,20 @@
 if [ -f $HOME/.defaultjdk ]; then
-    DEFAULT_JDK_VERSION=`cat $HOME/.defaultjdk`
+  export JAVA_HOME=`cat $HOME/.defaultjdk`
 fi
 
-export DEFAULT_JDK_VERSION=${DEFAULT_JDK_VERSION:-1.7}
+function switchjava() {
+  if [ -z "$1" ]; then
+    echo $JAVA_HOME
+  else
+    export JAVA_HOME=`/usr/libexec/java_home -v $1`
+  fi
+}
 
-export JAVA_HOME=`/usr/libexec/java_home -v $DEFAULT_JDK_VERSION`
+function defaultjava() {
+  if [ -z "$1" ]; then
+    cat $HOME/.defaultjdk
+  else
+    switchjava $1
+    echo $JAVA_HOME > $HOME/.defaultjdk
+  fi
+}

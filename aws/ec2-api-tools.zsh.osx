@@ -1,1 +1,0 @@
-export EC2_HOME=`brew --prefix ec2-api-tools`/libexec

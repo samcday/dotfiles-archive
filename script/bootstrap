@@ -26,7 +26,6 @@ fail () {
   exit
 }
 
-
 if [ $TERM_PROGRAM == "iTerm.app" ]; then
   fail "Don't run me from iTerm."
 fi
@@ -75,6 +74,14 @@ setup_gitconfig () {
 
     success 'gitconfig'
   fi
+}
+
+setup_gitmodules() {
+  info "Updating git submodules"
+  cd $DOTFILES_ROOT
+  git submodule init > /dev/null 2>&1
+  git submodule update > /dev/null 2>&1
+  success "Git submodules updated"
 }
 
 link_files () {
@@ -153,6 +160,7 @@ setup_gitconfig
 install_dotfiles
 setup_st3
 setup_iterm2
+setup_gitmodules
 
 # If we are on a mac, lets install and setup homebrew
 if [ "$(uname -s)" == "Darwin" ]

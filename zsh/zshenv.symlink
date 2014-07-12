@@ -1,8 +1,20 @@
+typeset -F SECONDS
+
+DOTFILES_START=$SECONDS
+
+# Uncomment this to see how long the various crap we source takes to run.
+# PROFILE_SHELL=1
+
 # shortcut to this dotfiles path is $ZSH_DF
 export ZSH_DF=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
+
+# We were running brew --prefix in a bunch of places, but this is actually
+# pretty expensive to run. So we specify brew home here. We could use 
+# brew --prefix, but really, are we ever going to be anywhere but /usr/local?!
+BREW_PREFIX=/usr/local
 
 # all of our zsh files
 typeset -U zshenv_files
@@ -10,10 +22,23 @@ config_files=($ZSH_DF/**/*.zshenv)
 # Don't auto-import anything under ohmyzsh-custom. baaaad shit will ensue.
 config_files=(${config_files:#$ZSH_DF/ohmyzsh-custom*})
 
+if [ -n "$PROFILE_SHELL" ]; then
+    function sourceFile() {
+        START=$SECONDS
+        source $1
+        (( took = $SECONDS - $START ))
+        echo $1 took ${took}s
+    }
+else
+    function sourceFile() {
+        source $1
+    }
+fi
+
 # load everything but the path and completion files
 for file in ${config_files}
 do
-  source $file
+  sourceFile $file
 done
 
 case $OSTYPE in
@@ -23,7 +48,7 @@ darwin*)
     if [ "$osx_config_files" != "$ZSH_DF/**/*.zshenv.osx" ]; then
         for file in ${osx_config_files}
         do
-            source $file 
+            sourceFile $file 
         done
     fi
     ;;
@@ -33,7 +58,7 @@ linux*)
     if [ "$linux_config_files" != "$ZSH_DF/**/*.zshenv.linux" ]; then
         for file in ${linux_config_files}
         do
-            source $file 
+            sourceFile $file 
         done
     fi
     ;;

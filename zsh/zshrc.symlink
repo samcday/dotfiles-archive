@@ -9,25 +9,25 @@ linux_config_files=($ZSH_DF/**/*.zsh.linux)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+  sourceFile $file
 done
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-  source $file
+  sourceFile $file
 done
 case $OSTYPE in
 darwin*)
 	for file in ${osx_config_files}
 	do
-		source $file 
+		sourceFile $file 
 	done
 	;;
 linux*)
 	for file in ${linux_config_files}
 	do
-		source $file 
+		sourceFile $file 
 	done
 	;;
 esac
@@ -36,7 +36,7 @@ esac
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
 then
-  source ~/.localrc
+  sourceFile ~/.localrc
 fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
@@ -46,7 +46,10 @@ compinit
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  source $file
+  sourceFile $file
 done
 
 unset config_files
+
+(( total = $SECONDS - $DOTFILES_START ))
+echo "Shell started in ${total}s"

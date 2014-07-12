@@ -1,0 +1,1 @@
+export EC2_HOME="$BREW_PREFIX/opt/ec2-api-tools/libexec"
