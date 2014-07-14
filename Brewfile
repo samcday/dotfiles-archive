@@ -45,6 +45,7 @@ cask install dropbox
 cask install firefox
 cask install flux
 cask install gimp
+cask install github
 cask install google-chrome
 cask install google-drive
 cask install hipchat
@@ -52,6 +53,7 @@ cask install iterm2
 cask install keka
 cask install pgadmin3
 cask install sequel-pro
+cask install sourcetree
 cask install spotify
 cask install virtualbox
 cask install xquartz
