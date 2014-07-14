@@ -16,6 +16,7 @@ install cmake
 install composer
 install coreutils
 install couchdb
+install ctags
 install docker
 install elasticsearch
 install git
