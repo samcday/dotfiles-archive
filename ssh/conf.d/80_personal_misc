@@ -1,6 +1,16 @@
 Host zippy.samcday.com.au speedy.samcday.com.au
-    User sam
+  User sam
 
 Host dmhost
-    Hostname host.daymedia.com.au
-    User sam
+  Hostname host.daymedia.com.au
+  User sam
+
+Host home
+  Hostname home.samcday.com.au
+  User root
+
+Host home-imac
+  Hostname sams-imac.lan
+  User sam
+  ProxyCommand nohup ssh home nc %h 22
+  StrictHostKeyChecking no
