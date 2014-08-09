@@ -5,6 +5,10 @@ Host dmhost
   Hostname host.daymedia.com.au
   User sam
 
+Host router
+  User root
+  Hostname 192.168.1.1
+
 Host home
   Hostname home.samcday.com.au
   User root
