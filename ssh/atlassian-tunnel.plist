@@ -12,7 +12,7 @@
     <string>-N</string>
     <string>-C</string>
     <string>-D5000</string>
-    <string>sydhomenocontrolmaster</string>
+    <string>atlhomenocontrolmaster</string>
   </array>
   <key>RunAtLoad</key>
   <true/>

@@ -1,15 +1,15 @@
-Host sydjumpbox
+Host atljumpbox
     Hostname sydssh.atlassian.com
     User sday
 
-Host sydhome
+Host atlhome
     Hostname sday.dyn.syd.atlassian.com
 
-Host sydhomenocontrolmaster
+Host atlhomenocontrolmaster
     Hostname sday.dyn.syd.atlassian.com
     ControlMaster no
     ControlPath /dev/null
 
-Host *.atlassian.com *.jira-dev.com sydhome sydhomenocontrolmaster
+Host *.atlassian.com *.jira-dev.com atlhome atlhomenocontrolmaster
     User sday
-    ProxyCommand nohup ssh sydjumpbox nc %h 22
+    ProxyCommand nohup ssh atljumpbox nc %h 22
