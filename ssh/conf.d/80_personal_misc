@@ -13,7 +13,6 @@ Host home
   Hostname home.samcday.com.au
   User root
 
-# Doesn't seem to work atm. Just hangs. I think there's something dodgy with Busybox nc.
 Host home-imac
   Hostname sams-imac.lan
   User sam
