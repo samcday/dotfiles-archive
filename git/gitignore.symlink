@@ -22,3 +22,4 @@ web-app/WEB-INF/tld/fmt.tld
 .vagrant/
 node_modules/
 .idea/
+.gradle/
