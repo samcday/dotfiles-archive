@@ -11,6 +11,8 @@
 		}
 	],
 	"color_scheme": "Packages/User/Flatland Dark (SL).tmTheme",
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS"],
+	"file_exclude_patterns": [".tags", ".tags_sorted_by_file", "*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
 	"font_size": 18,
 	"ignored_packages":
 	[
