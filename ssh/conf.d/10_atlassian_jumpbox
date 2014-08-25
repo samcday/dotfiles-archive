@@ -12,4 +12,4 @@ Host atlhomenocontrolmaster
 
 Host *.atlassian.com *.jira-dev.com atlhome atlhomenocontrolmaster *.uc-inf.net *-sc1 *-syd1 *-ash1
     User sday
-    ProxyCommand nohup ssh atljumpbox nc %h 22
+    ProxyCommand nohup ssh atljumpbox nc -w 3600 %h 22
