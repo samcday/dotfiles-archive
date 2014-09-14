@@ -5,6 +5,7 @@
 		"CMake",
 		"CTags",
 		"DashDoc",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"GitGutter",
 		"GoSublime",
