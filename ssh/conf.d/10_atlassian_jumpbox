@@ -10,6 +10,6 @@ Host atlhomenocontrolmaster
     ControlMaster no
     ControlPath /dev/null
 
-Host *.atlassian.com *.jira-dev.com atlhome atlhomenocontrolmaster *.uc-inf.net *-sc1 *-syd1 *-ash1 npmio
+Host *.atlassian.com *.jira-dev.com atlhome atlhomenocontrolmaster *.uc-inf.net *-sc1 *-syd1 *-ash1
     User sday
     ProxyCommand nohup ssh atljumpbox nc -w 3600 %h 22
