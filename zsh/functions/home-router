@@ -1,1 +1,1 @@
-ssh home
+ssh home-router $*

@@ -9,12 +9,12 @@ Host router
   User root
   Hostname 192.168.1.1
 
-Host home
+Host home-router
   Hostname home.samcday.com.au
   User root
 
-Host home-imac
+Host home
   Hostname sams-imac.lan
   User sam
-  ProxyCommand nohup ssh home nc %h 22
+  ProxyCommand nohup ssh home-router nc %h 22
   StrictHostKeyChecking no
