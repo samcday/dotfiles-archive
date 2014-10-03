@@ -26,10 +26,6 @@ fail () {
   exit
 }
 
-if [ $TERM_PROGRAM == "iTerm.app" ]; then
-  fail "Don't run me from iTerm."
-fi
-
 setup_st3() {
   ST3_HOME=$HOME/Library/Application\ Support/Sublime\ Text\ 3
   if [ ! -d "$ST3_HOME" ]; then
@@ -51,13 +47,18 @@ setup_st3() {
 }
 
 setup_iterm2() {
-  info "Setting up iTerm2"
-  killall iTerm 2>/dev/null || true
-  cp $DOTFILES_ROOT/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
-  killall cfprefsd
-  mkdir -p $HOME/Library/Fonts
-  cp $DOTFILES_ROOT/fonts/* $HOME/Library/Fonts
-  success "iTerm2 preferences updated."
+  if [ $TERM_PROGRAM == "iTerm.app" ]; then
+    info "Can't reconfigure iTerm when bootstrap is run from it. Run me from Terminal.app."
+    echo
+  else
+    info "Setting up iTerm2"
+    killall iTerm 2>/dev/null || true
+    cp $DOTFILES_ROOT/iterm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
+    killall cfprefsd
+    mkdir -p $HOME/Library/Fonts
+    cp $DOTFILES_ROOT/fonts/* $HOME/Library/Fonts
+    success "iTerm2 preferences updated."
+  fi
 }
 
 setup_gitconfig () {
