@@ -9,9 +9,6 @@
         helper = osxkeychain
 [alias]
         co = checkout
-        promote = !$ZSH_DF/bin/git-promote
-        wtf     = !$ZSH_DF/bin/git-wtf
-        rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
         st      = status
         br      = branch
