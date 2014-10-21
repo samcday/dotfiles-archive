@@ -12,7 +12,7 @@
     <string>-N</string>
     <string>-C</string>
     <string>-D5000</string>
-    <string>atlhomenocontrolmaster</string>
+    <string>atljumpboxnocontrolmaster</string>
   </array>
   <key>RunAtLoad</key>
   <true/>

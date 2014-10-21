@@ -2,6 +2,12 @@ Host atljumpbox
     Hostname sydssh.atlassian.com
     User sday
 
+Host atljumpboxnocontrolmaster
+    Hostname sydssh.atlassian.com
+    User sday
+    ControlMaster no
+    ControlPath /dev/null
+
 Host atlhome
     Hostname sday.dyn.syd.atlassian.com
 
