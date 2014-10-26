@@ -24,12 +24,10 @@ install go
 install grc
 install nginx
 install ngrok
-install php55
 install pidof
 install postgresql
 install python
 install redis
-install sbt
 install spark
 install sqlite
 install subversion
