@@ -1,1 +1,1 @@
-ssh -L5111:localhost:5111 -L5113:localhost:5113 -L5115:localhost:5115 -L5117:localhost:5117 -L5119:localhost:5119 ${1}.jira-dev.com "${@:2}"
+ssh -L5111:localhost:5111 -L5113:localhost:5113 -L5115:localhost:5115 -L5117:localhost:5117 -L5119:localhost:5119 ${1}.jira-dev.com -S none "${@:2}"
