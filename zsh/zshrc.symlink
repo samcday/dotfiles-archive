@@ -4,7 +4,6 @@ config_files=($ZSH_DF/**/*.zsh)
 # Don't auto-import anything under ohmyzsh-custom. baaaad shit will ensue.
 config_files=(${config_files:#$ZSH_DF/ohmyzsh-custom*})
 osx_config_files=($ZSH_DF/**/*.zsh.osx)
-linux_config_files=($ZSH_DF/**/*.zsh.linux)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -20,12 +19,6 @@ done
 case $OSTYPE in
 darwin*)
 	for file in ${osx_config_files}
-	do
-		sourceFile $file 
-	done
-	;;
-linux*)
-	for file in ${linux_config_files}
 	do
 		sourceFile $file 
 	done
