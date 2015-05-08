@@ -52,14 +52,4 @@ darwin*)
         done
     fi
     ;;
-linux*)
-    linux_config_files=($ZSH_DF/**/*.zshenv.linux)
-    # Icky hack. Check if the glob failed (no matches).
-    if [ "$linux_config_files" != "$ZSH_DF/**/*.zshenv.linux" ]; then
-        for file in ${linux_config_files}
-        do
-            sourceFile $file 
-        done
-    fi
-    ;;
 esac

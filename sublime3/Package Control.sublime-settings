@@ -1,4 +1,7 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Better CoffeeScript",
@@ -21,6 +24,7 @@
 		"LESS",
 		"Markdown Preview",
 		"nginx",
+		"Package Control",
 		"Pretty JSON",
 		"Puppet",
 		"SublimeFixMacPath",
