@@ -29,7 +29,6 @@
 		"Puppet",
 		"SublimeFixMacPath",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pylint",
