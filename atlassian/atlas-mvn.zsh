@@ -1,1 +1,1 @@
-export ATLAS_MVN=$HOME/bin/mvn
+export ATLAS_MVN=/usr/local/bin/mvn
