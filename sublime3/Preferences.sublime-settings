@@ -46,7 +46,8 @@
 	"font_size": 16,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"JavaScript"
 	],
 	"jshint_options":
 	{

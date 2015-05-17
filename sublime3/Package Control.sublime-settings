@@ -4,6 +4,7 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"Better CoffeeScript",
 		"CMake",
 		"CTags",
@@ -18,7 +19,6 @@
 		"Handlebars",
 		"HTML-CSS-JS Prettify",
 		"Java Velocity",
-		"JavaScriptNext - ES6 Syntax",
 		"Jinja2",
 		"JsFormat",
 		"LESS",
