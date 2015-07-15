@@ -1,0 +1,8 @@
+local user=sday
+local pass=${ATL_STAFFID_PASS}
+local duo=${2:-push}
+echo
+echo -n "Connecting ${user} to vpn using DUO ${duo}..."
+printf "${user}\n${pass}\n${duo}\n" | /opt/cisco/anyconnect/bin/vpn -s connect AU &> /dev/null
+unset user pass duo
+echo "Done"
