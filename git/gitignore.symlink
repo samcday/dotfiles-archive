@@ -8,7 +8,6 @@ target/
 stacktrace.log
 plugin.xml
 *.pyc
-dist
 *.egg-info
 .codeintel
 htmlcov
