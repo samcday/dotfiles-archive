@@ -43,11 +43,12 @@
 		".hg",
 		"CVS"
 	],
-	"font_size": 18,
+	"font_face": "Hack",
+	"font_size": 19,
 	"ignored_packages":
 	[
-		"JavaScript",
-		"Vintage"
+		"Vintage",
+		"JavaScript"
 	],
 	"jshint_options":
 	{
