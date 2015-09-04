@@ -37,3 +37,6 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+
+[url "stash.atlassian.com:"]
+        insteadOf = https://stash.atlassian.com/scm
