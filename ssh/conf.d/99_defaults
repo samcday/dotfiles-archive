@@ -1,3 +1,8 @@
+Host localhost
+    ControlMaster no
+    ControlPath ~/.ssh/ssh-%r@%h:%p.sock
+    ControlPersist no
+
 Host *
     ForwardAgent yes
     ServerAliveInterval 30
