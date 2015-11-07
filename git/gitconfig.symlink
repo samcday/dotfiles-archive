@@ -5,7 +5,7 @@
         protocol = https
 [user]
 	name = Sam Day
-	email = sday@atlassian.com
+	email = "(none)"
         helper = osxkeychain
 [alias]
         co = checkout
