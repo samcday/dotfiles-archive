@@ -14,7 +14,7 @@ Host home-router
   User root
 
 Host home
-  Hostname sams-imac.lan
+  Hostname 192.168.1.10
   User sam
   ProxyCommand nohup ssh home-router nc %h 22
   StrictHostKeyChecking no
