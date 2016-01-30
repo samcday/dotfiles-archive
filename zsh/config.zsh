@@ -2,6 +2,8 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 fpath=($ZSH_DF/zsh/functions $fpath)
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
+autoload -U compinit && compinit
 
 autoload -U $ZSH_DF/zsh/functions/*(:t)
 
