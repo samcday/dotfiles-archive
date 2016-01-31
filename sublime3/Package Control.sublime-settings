@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -34,7 +35,6 @@
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pylint",
-		"tern_for_sublime",
 		"Theme - Flatland",
 		"Varnish VCL"
 	],
