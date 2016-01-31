@@ -3,6 +3,7 @@
 # bootstrap installs things.
 
 DOTFILES_ROOT="`pwd`"
+export ZSH_DF=$DOTFILES_ROOT
 
 set -e
 

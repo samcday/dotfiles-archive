@@ -67,15 +67,11 @@ prompt_context() {
     user=me
   fi
 
-  if [[ $machine == "SamMBA" ]]; then
-    machine=laptop
-  fi
-
   if [[ $machine == "sams-imac" ]]; then
     machine=home
   fi
 
-  if [[ $machine == "sday" ]]; then
+  if [[ $machine == "Sams-MacBook-Pro" ]]; then
     machine=work
   fi
 
