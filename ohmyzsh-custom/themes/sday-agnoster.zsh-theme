@@ -71,7 +71,7 @@ prompt_context() {
     machine=home
   fi
 
-  if [[ $machine == "Sams-MacBook-Pro" ]]; then
+  if [[ $machine == "sams-mbp" ]]; then
     machine=work
   fi
 
