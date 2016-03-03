@@ -4,5 +4,5 @@ if [ -d $HOME/awscli-saml-auth ]; then
 fi
 
 function atl-awstoken() {
-  awstoken -u sday -p $ATL_LDAP_PASS
+  awstoken -u sday@atlassian.com
 }
