@@ -61,7 +61,7 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   local user=`whoami`
-  local machine=`hostname -s`
+  local machine=`hostname -s | tr '[:upper:]' '[:lower:]'`
 
   if [[ $user == "sday" || $user == "sam" || $user == "samday" ]]; then
     user=me
