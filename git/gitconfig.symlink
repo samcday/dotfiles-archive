@@ -7,6 +7,7 @@
 	name = Sam Day
 	email = "(none)"
         helper = osxkeychain
+	useConfigOnly = true
 [alias]
         co = checkout
         count   = !git shortlog -sn
