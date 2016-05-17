@@ -1,9 +1,5 @@
-[ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-  export GPG_AGENT_INFO
-else
-  eval $(gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
-fi
+# Ensure gpg-agent is running.
+gpgconf --launch gpg-agent
 
-export GPG_AGENT_INFO
-export GPG_TTY=$(tty)
+# Point SSH at gpg agent.
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
