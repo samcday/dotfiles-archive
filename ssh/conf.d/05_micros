@@ -1,19 +1,2 @@
 Host *.atl-inf.io
     User ubuntu
-    ForwardAgent true
-    Compression yes
-
-Host jumpbox*.platform.dev.atl-inf.io
-    IdentityFile ~/.ssh/bootstrapper-dev.pem
-
-Host jumpbox*.domain.dev.atl-inf.io
-    IdentityFile ~/.ssh/bootstrapper-dev.pem
-
-Host jumpbox*.app.dev.atl-inf.io
-    IdentityFile ~/.ssh/bootstrapper-dev.pem
-
-Host jumpbox*.staging.atl-inf.io
-  IdentityFile ~/.ssh/bootstrapper-staging.pem
-
-Host jumpbox*.us*.atl-inf.io
-  IdentityFile ~/.ssh/bootstrapper-prod.pem
