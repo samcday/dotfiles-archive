@@ -29,6 +29,7 @@
 		"Package Control",
 		"Pretty JSON",
 		"Puppet",
+		"Rust",
 		"SublimeFixMacPath",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
@@ -36,6 +37,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-pylint",
 		"Theme - Flatland",
+		"TOML",
 		"Varnish VCL"
 	],
 	"repositories":
