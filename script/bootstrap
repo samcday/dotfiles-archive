@@ -174,23 +174,23 @@ install_dotfiles () {
   done
 }
 
-# setup_gitconfig
+setup_gitconfig
 install_dotfiles
-# setup_st3
-# setup_iterm2
-# setup_gitmodules
+setup_st3
+setup_iterm2
+setup_gitmodules
 
-# # If we are on a mac, lets install and setup homebrew
-# if [ "$(uname -s)" == "Darwin" ]
-# then
-#   info "installing dependencies"
-#   if . bin/dot > /tmp/dotfiles-dot 2>&1
-#   then
-#     success "dependencies installed"
-#   else
-#     fail "error installing dependencies"
-#   fi
-# fi
+# If we are on a mac, lets install and setup homebrew
+if [ "$(uname -s)" == "Darwin" ]
+then
+  info "installing dependencies"
+  if . bin/dot > /tmp/dotfiles-dot 2>&1
+  then
+    success "dependencies installed"
+  else
+    fail "error installing dependencies"
+  fi
+fi
 
-# echo ''
-# echo '  All installed!'
+echo ''
+echo '  All installed!'
