@@ -98,11 +98,27 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  for source in `find . -type f | grep .symlink`
   do
-    dest="$HOME/.`basename \"${source%.*}\"`"
+    target=$(echo $source | cut -c 3-)
+    target=${target#*/}
+    dir=$(dirname ${target})
+    dir=${dir%.*}
+    file=$(basename ${target})
+    file=${file%.symlink}
+    dest="${HOME}/."
+    if [ -n "${dir}" ]; then
+      dest="${dest}${dir}/"
+    fi
+    dest="${dest}${file}"
 
-    if [ -f $dest ] || [ -d $dest ]
+    source="${ZSH_DF}/${source#*/}"
+
+    if [ -d $dest ]; then
+      fail "$dest is a directory"
+    fi
+
+    if [ -f $dest ] || [ -h $dest ]
     then
 
       overwrite=false
@@ -134,7 +150,7 @@ install_dotfiles () {
 
       if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
       then
-        rm -rf $dest
+        rm -f $dest
         success "removed $dest"
       fi
 
@@ -158,23 +174,23 @@ install_dotfiles () {
   done
 }
 
-setup_gitconfig
+# setup_gitconfig
 install_dotfiles
-setup_st3
-setup_iterm2
-setup_gitmodules
+# setup_st3
+# setup_iterm2
+# setup_gitmodules
 
-# If we are on a mac, lets install and setup homebrew
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if . bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
+# # If we are on a mac, lets install and setup homebrew
+# if [ "$(uname -s)" == "Darwin" ]
+# then
+#   info "installing dependencies"
+#   if . bin/dot > /tmp/dotfiles-dot 2>&1
+#   then
+#     success "dependencies installed"
+#   else
+#     fail "error installing dependencies"
+#   fi
+# fi
 
-echo ''
-echo '  All installed!'
+# echo ''
+# echo '  All installed!'
