@@ -1,1 +1,1 @@
-. "$(/usr/local/bin/brew --prefix nvm)/nvm.sh"
+[[ -s $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
