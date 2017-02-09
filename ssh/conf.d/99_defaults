@@ -4,7 +4,6 @@ Host localhost
     ControlPersist no
 
 Host *
-    ForwardAgent yes
     ServerAliveInterval 30
     ControlMaster auto
     ControlPath ~/.ssh/ssh-%r@%h:%p.sock

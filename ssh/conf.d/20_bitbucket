@@ -1,2 +1,5 @@
 Host bitbucket.org
     User git
+    ControlMaster no
+    ControlPersist no
+    ControlPath none
