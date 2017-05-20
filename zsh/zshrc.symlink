@@ -46,5 +46,3 @@ unset config_files
 
 (( total = $SECONDS - $DOTFILES_START ))
 echo "Shell started in ${total}s"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

@@ -1,1 +1,1 @@
-[[ -s $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
+[[ -s $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh --no-use
