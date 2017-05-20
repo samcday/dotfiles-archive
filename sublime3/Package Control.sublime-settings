@@ -37,6 +37,7 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pylint",
+		"SublimeLinter-rubocop",
 		"Terraform",
 		"Theme - Flatland",
 		"TOML",
