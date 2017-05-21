@@ -1,11 +1,13 @@
 #!/bin/bash
 
+ST3=$HOME/sublime_text_3/sublime_text
+
 ARGS=$*
 function runsbl() {
 	if [[ $ARGS == *-w* ]]; then
-		~/Sublime\ Text\ 2/sublime_text $* $ARGS
+		$ST3 $* $ARGS
 	else
-		setsid ~/Sublime\ Text\ 2/sublime_text $* $ARGS 2>&1 > /dev/null &
+		setsid $ST3 $* $ARGS 2>&1 > /dev/null &
 	fi
 }
 
