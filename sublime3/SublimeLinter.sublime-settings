@@ -70,11 +70,21 @@
 				],
 				"rcfile": "",
 				"show-codes": false
+			},
+			"rubocop":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
 			}
 		},
 		"mark_style": "outline",
 		"no_column_highlights_line": false,
-		"passive_warnings": false,
+		"passive_warnings": true,
 		"paths":
 		{
 			"osx":
@@ -106,6 +116,12 @@
 			"php": "html",
 			"python django": "python"
 		},
+		"tooltip_fontsize": "1rem",
+		"tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+		"tooltip_theme_excludes":
+		[
+		],
+		"tooltips": false,
 		"warning_color": "DDB700",
 		"wrap_find": true
 	}

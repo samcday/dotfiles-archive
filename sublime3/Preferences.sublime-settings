@@ -10,7 +10,7 @@
 			"selector": "source.js"
 		}
 	],
-	"color_scheme": "Packages/User/Flatland Dark (SL).tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"file_exclude_patterns":
 	[
 		".tags",
@@ -38,13 +38,14 @@
 	],
 	"folder_exclude_patterns":
 	[
+		".idea",
 		".svn",
 		".git",
 		".hg",
 		"CVS"
 	],
 	"font_face": "Hack",
-	"font_size": 12,
+	"font_size": 13,
 	"ignored_packages":
 	[
 		"JavaScript",
@@ -67,6 +68,6 @@
 	],
 	"sublimelinter": true,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
