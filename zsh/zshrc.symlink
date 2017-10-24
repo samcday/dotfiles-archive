@@ -46,3 +46,6 @@ unset config_files
 
 (( total = $SECONDS - $DOTFILES_START ))
 echo "Shell started in ${total}s"
+
+autoload -U promptinit; promptinit
+prompt pure
