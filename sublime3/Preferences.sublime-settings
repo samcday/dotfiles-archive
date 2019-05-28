@@ -10,7 +10,6 @@
 			"selector": "source.js"
 		}
 	],
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"file_exclude_patterns":
 	[
 		".tags",
@@ -68,6 +67,5 @@
 	],
 	"sublimelinter": true,
 	"tab_size": 2,
-	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true
 }

@@ -48,4 +48,4 @@ unset config_files
 echo "Shell started in ${total}s"
 
 autoload -U promptinit; promptinit
-prompt pure
+#prompt pure
